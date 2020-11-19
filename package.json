@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/SwiftHoliday/bandAid-App/issues"
   },
-  "homepage": "https://github.com/SwiftHoliday/bandAid-App#readme"
+  "homepage": "https://github.com/SwiftHoliday/bandAid-App#readme",
+  "dependencies": {
+    "mongoose": "^5.10.15"
+  }
 }
