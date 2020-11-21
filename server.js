@@ -4,6 +4,7 @@ const port = 3000;
 
 const indexRouter = require('./routes/index');
 const morgan = require('morgan');
+const methodOverride = require('method-override');
 
 // create express app
 const app = express();
@@ -17,6 +18,7 @@ app.set('view engine', 'ejs');
 app.use(morgan('dev'));
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: false }));
+app.use(methodOverride('_method'));
 
 // mount routes
 app.use('/', indexRouter);
