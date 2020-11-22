@@ -7,6 +7,9 @@ module.exports = {
 
 function index(req, res) {
     Band.find({}, function (err, bands) {
-        res.render('bands/index', { title: 'All Bands', bands });
+        res.render('bands/index', {
+            bands,
+            user: req.user
+        });
     });
 }

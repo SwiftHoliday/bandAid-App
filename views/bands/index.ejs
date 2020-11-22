@@ -5,7 +5,8 @@
    <head>
      <title>bandAid</title>
      <!-- Google Fonts -->
-     <link href="https://fonts.googleapis.com/css?family=Baloo&display=swap" rel="stylesheet">
+     <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Fontdiner+Swanky&display=swap" rel="stylesheet">
 
      <!-- Materialize Icons -->
      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -23,10 +24,16 @@
     <div class="navbar-fixed">
         <nav>
             <div class="nav-wrapper red">
-                <a href="/" class="logo left">bandAid logo</a>
+                <a href="/" class="logo left">Band Aid</a>
                 <ul class="right">
-                    <li><a href="/bands">Bands</a></li>
-
+                    
+                <li>
+                  <% if(user) { %>
+                    <a href="/logout"><i class="material-icons left">trending_flat</i>Logout</a>
+                  <% } else { %>
+                    <a href="/auth/google"><i class="material-icons left">vpn_key</i>Login With Google</a>
+                 <% } %>
+                </li>
                 </ul>
             </div>
         </nav>
