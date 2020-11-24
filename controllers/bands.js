@@ -2,7 +2,8 @@
 const Band = require('../models/band')
 
 module.exports = {
-    index
+    index,
+    new: newBand
 }
 
 function index(req, res) {
@@ -12,4 +13,8 @@ function index(req, res) {
             user: req.user
         });
     });
+}
+
+function newBand(req, res) {
+    res.render('bands/new', { title: 'Add New Band' });
 }

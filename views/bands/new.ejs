@@ -1,10 +1,4 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-  <title>bandAid</title>
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Fontdiner+Swanky&display=swap" rel="stylesheet">
   <!-- Materialize Icons -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -30,12 +24,13 @@
             </div>
         </nav>
     </div>
-    <h1>Welcome to bandAid</h1>
     <h2>Let's Get Started</h2>
-    <h3><a href="/bands/new">Create Band</a></h3>
+    <form id="new-band-form" action="/bands" method="POST">
+        <label>Band Name:</label>
+        <input type="text" name="bandName">
 
-    <footer>
-        <p>Copyright &copy; 2020 Band Aid All Rights Reserved</p>
-    </footer>
+        <label>Genre:</label>
+        <input type="text" name="genre">
+    </form>
 </body>
 </html>

@@ -4,17 +4,6 @@ const mongoose = require('mongoose');
 // shortcut variables
 const Schema = mongoose.Schema;
 
-
-// defined band Schema
-const bandSchema = new Schema({
-    name: String,
-    genre: String,
-    googleId: String,
-    member: [String]
-});
-
-
-
 const skillSchema = new Schema({
     guitar: String,
     keys: String,
@@ -23,4 +12,4 @@ const skillSchema = new Schema({
     vocals: String
 });
 
-module.exports = mongoose.model('Band', bandSchema);
+module.exports = mongoose.model('Skill', skillSchema);
