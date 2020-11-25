@@ -8,20 +8,21 @@ passport.use(new GoogleStrategy({
     callbackURL: process.env.GOOGLE_CALLBACK
 }, function(accessToken, refreshToken, profile, cb) {
         
-        Band.findOne({ googleId: profile.id }, function (err, band) {
+        Band.findOne({ 'googleId': profile.id }, function (err, band) {
             if (err) return cb(err);
             if (band) {
-                return cb(null, band)
+                return cb(null, band);
             } else {
                 const newBand = new Band({
                     name: profile.displayName,
                     email: profile.emails[0].value,
-                    googleId: profile.id
+                    googleId: profile.id,
+                    avatarURL: profile._json.picture
                 });
 
                 newBand.save(function (err) {
                     if (err) return cb(err);
-                    return cb(null, band);
+                    return cb(null, newBand);
                 });
             }
         });
@@ -29,7 +30,7 @@ passport.use(new GoogleStrategy({
 
 
 passport.serializeUser(function(band, done) {
-    done(null, band);
+    done(null, band.id);
 });
 
 passport.deserializeUser(function (id, done) {

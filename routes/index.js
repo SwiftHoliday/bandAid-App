@@ -12,7 +12,9 @@ const router = express.Router();
 
 
 // define routes
-router.get('/', indexCtrl.index);
+router.get('/auth/google', passport.authenticate('google', {
+    scope: ['profile', 'email']
+}));
 
 // google validates user credentials, and return user
 router.get('/oauth2callback', passport.authenticate('google', {
@@ -25,9 +27,8 @@ router.get('/logout', function (req, res) {
     res.redirect('/');
 });
 
-router.get('/auth/google', passport.authenticate('google', {
-    scope: ['profile', 'email']
-}));
+
+router.get('/', indexCtrl.index);
 
 // export router object
 module.exports = router;

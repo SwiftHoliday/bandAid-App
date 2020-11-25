@@ -7,7 +7,8 @@ const Schema = mongoose.Schema;
 
 const memberSchema = new Schema({
     name: String,
-    Skills: [skillSchema],
+    skills: String,
+    telephone: Number,
     avatarURL: String,
     googleId: String
 });
