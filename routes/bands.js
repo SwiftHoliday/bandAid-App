@@ -13,6 +13,7 @@ const bandsCtrl = require('../controllers/bands');
 // Define Routes
 router.get('/', bandsCtrl.index); // see all bands
 router.get('/new', bandsCtrl.new); // make a new band page
+router.post('/', bandsCtrl.create);
 
 
 module.exports = router;

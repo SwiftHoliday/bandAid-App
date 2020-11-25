@@ -3,7 +3,9 @@ const Band = require('../models/band')
 
 module.exports = {
     index,
-    new: newBand
+    new: newBand,
+    create,
+    
 }
 
 function index(req, res) {
@@ -15,6 +17,21 @@ function index(req, res) {
     });
 }
 
-function newBand(req, res) {
-    res.render('bands/new', { title: 'Add New Band' });
+
+
+
+function create(req, res) {
+    for (let key in req.body) {
+        if (req.body[key] === '') delete req.body[key];
+    }
+    const band = new Band(req.body);
+    band.save(function (err) {
+        if (err) return res.redirect('/bands/new');
+        res.redirect('/bands');
+    });
 }
+
+function newBand(req, res) {
+    res.render('bands/new', { title: 'Add a New Band' });
+}
+

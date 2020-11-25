@@ -7,9 +7,10 @@ const Schema = mongoose.Schema;
 
 // defined band Schema
 const bandSchema = new Schema({
-    name: String,
-    googleId: String,
-    member: [String]
+    band: {
+        type: String,
+       googleId: String,  
+    }
 });
 
 
