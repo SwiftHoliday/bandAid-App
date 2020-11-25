@@ -28,6 +28,7 @@
                 <ul class="right">
                   <li><a href="/">Home</a></li>
                   <li><a href="/bands/new">New Band</a></li>
+                  <li><a href="/">Members</a></li>
                 <li>
                   <% if(user) { %>
                     <a href="/logout"><i class="material-icons left">trending_flat</i>Logout</a>
@@ -40,9 +41,6 @@
         </nav>
     </div>
     <h1>Your Bands</h1>
-    <form action="/bands/<%= bands._id %>?_method=DELETE" method="POST">
-      <button type="submit">Delete</button>
-      
       </form>
     <table id="list">
       <thead>
@@ -54,7 +52,8 @@
         <% bands.forEach(function(b) { %>
         <tr>
           <td><%= b.band %></td>
-          <td><a href="/bands/<%= b._id %>">See More</a></td>
+          <td><a href="/bands/<%= b._id %>">See Band Details</a></td>
+          <td><a href="/bands/<%= b._id %>/members/new">Add Members</a></td>
         </tr>
         <% }); %>
       </tbody>

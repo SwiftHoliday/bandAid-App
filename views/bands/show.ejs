@@ -29,4 +29,21 @@
             </div>
         </nav>
     </div>
+
     <h2>Band Details</h2>
+    <form action="/bands/<%= %>?_method=DELETE" method="POST">
+        <button type="submit">Delete</button>
+        <table>
+            <thead>
+                <tr>
+                    <th>Band Name</th> 
+
+                    <th>Members</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><%=  %></td>
+                </tr>
+            </tbody>
+        </table>

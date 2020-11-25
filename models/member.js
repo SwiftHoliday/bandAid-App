@@ -9,8 +9,7 @@ const memberSchema = new Schema({
     name: String,
     skills: String,
     telephone: Number,
-    avatarURL: String,
-    googleId: String
+    email: String,
 });
 
 module.exports = mongoose.model('Member', memberSchema);

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Members</title>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Fontdiner+Swanky&display=swap" rel="stylesheet">
+  <!-- Materialize Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Materialize CSS Framework -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="/css/style.css" />
+  <!-- JavaScript for Materialize -->
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</head>
+<body>
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper red">
+                <a href="/" class="logo left">Band Aid</a>
+                <ul class="right">
+                    <li><a href="/bands">Bands</a></li>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/members">Members</a></li>
+                    <h2>Your Members</h2>
+                        <form action="/bands/<%= bandId %>/members" method="POST">
+                            <div>
+                                <input name="name" required>
+                                <label>Name:</label>
+                            </div>
+                            <div>
+                                <input name="skills" required>
+                                <label>Skills:</label>
+                            </div>
+                            <div>
+                                <input name="telephone" type="number">
+                                <label>Phone Number:</label>
+                            </div>
+                            <div>
+                                <input name="email">
+                                <label>Email:</label>
+                            </div>
+                            <input type="submit" value="Add Member">
+                        </form>
+                </ul>
+            </div>
+        </nav>
+    </div>

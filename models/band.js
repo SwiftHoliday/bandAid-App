@@ -9,7 +9,6 @@ const Schema = mongoose.Schema;
 const bandSchema = new Schema({
     band: {
         type: String,
-       googleId: String,  
     }
 });
 

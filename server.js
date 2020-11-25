@@ -19,7 +19,7 @@ require('./config/passport');
 // require routes
 const indexRouter = require('./routes/index');
 const bandsRouter = require('./routes/bands');
-
+// const membersRouter = require('./routes/members')
 // view engine setup
 app.set('view engine', 'ejs');
 
@@ -45,6 +45,7 @@ app.use(passport.session());
 // mount routes
 app.use('/', indexRouter);
 app.use('/bands', bandsRouter);
+// app.use('/', membersRouter)
 
 // tell application to listen
 app.listen(port, function() {
