@@ -23,20 +23,20 @@
                 <ul class="right">
                     <li><a href="/bands">Bands</a></li>
                     <li><a href="/">Home</a></li>
-                    <li><a href="/">Members</a></li>
-
+                   
                 </ul>
             </div>
         </nav>
     </div>
 
     <h2>Band Details</h2>
-    <form action="/bands/<%= %>?_method=DELETE" method="POST">
+    <form action="/bands/<%= band._id %>?_method=DELETE" method="POST">
         <button type="submit">Delete</button>
         <table>
             <thead>
                 <tr>
                     <th>Band Name</th> 
+                   
 
                     <th>Members</th>
                 </tr>

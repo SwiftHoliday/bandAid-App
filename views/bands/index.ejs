@@ -49,11 +49,11 @@
         </tr>
       </thead>
       <tbody>
-        <% bands.forEach(function(b) { %>
+        <% bands.forEach(function(band) { %>
         <tr>
-          <td><%= b.band %></td>
-          <td><a href="/bands/<%= b._id %>">See Band Details</a></td>
-          <td><a href="/bands/<%= b._id %>/members/new">Add Members</a></td>
+          <td><%= band._id %></td>
+          <td><a href="/bands/<%= band._id %>">See Band Details</a></td>
+          <td><a href="/bands/<%= band._id %>/members/new">Add Members</a></td>
         </tr>
         <% }); %>
       </tbody>
