@@ -34,3 +34,7 @@ footer {
     padding: 3px;
     text-shadow: 1px 1px 5px black;
 }
+
+.grid-container {
+    display: column;
+  }

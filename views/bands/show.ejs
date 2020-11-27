@@ -33,28 +33,31 @@
     <form action="/bands/<%= band._id%>?_method=DELETE" method="POST">
         <button type="submit">Delete</button>
     </form>
-        <table id="list">
+        <div class="grid-container">
+            <table id="detail-list">
             <thead>
                 <tr>
-                    <th>Band Name</th> 
-                </tr>
-            </thead>
-                <tbody>
-                    <tr>
-                        <td><%= %></td>
-                        </tr>
-
-            <thead>
-                <tr>
-                    <th>Members</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td> <%= %></td>
-                </tr>
-            </tbody>
-        </table>
-</body>
-</html>
+                    <td>
+                        <th>Name</th>
+                        <th>Skills</th>
+                        <th>Phone Number</th>
+                        <th>Email</th>
+                    </td>
+                </thead>
+            </table>
+        </div>
+        <div class="grid-container">
+            <table id="detail-info">
+                    <tbody>
+                            <tr>
+                                <td><%= band.name %></td>
+                                <td><%= band.name %></td>
+                                <td><%= band.name %></td>
+                                <td><%= band.name %></td>
+                            </tr> 
+                        </tbody>
+                    </table>
+                </div>
+            </body>
+        </html>
         
