@@ -9,11 +9,10 @@ const SkillSchema = new Schema({
 })
 
 const memberSchema = new Schema({
-    member: {
         name: String,
         skills: [SkillSchema],
         telephone: String,
         email: String
-    }
+
 });
 module.exports = mongoose.model('Member', memberSchema);

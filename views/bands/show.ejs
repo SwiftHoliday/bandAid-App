@@ -49,12 +49,11 @@
         <div class="grid-container">
             <table id="detail-info">
                     <tbody>
+                        <%= members.forEach(function(member) { %>
                             <tr>
-                                <td><%= band.name %></td>
-                                <td><%= band.name %></td>
-                                <td><%= band.name %></td>
-                                <td><%= band.name %></td>
+                                <td><%= member.name %></td>
                             </tr> 
+                            <%= }); %>
                         </tbody>
                     </table>
                 </div>
