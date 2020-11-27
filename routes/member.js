@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const memberCtrl = require('../controllers/members');
+const membersCtrl = require('../controllers/members');
 
 router.get('/bands/:id/members/new', membersCtrl.new);
 

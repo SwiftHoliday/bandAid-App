@@ -33,7 +33,7 @@ function create(req, res) {
 */
 
 function create(req, res) {
-    const band = new Band(req.body);
+   const band = new Band(req.body); 
     band.save(function (err) {
         if (err) return res.redirect('/bands/new');
         res.redirect('/bands');
@@ -46,7 +46,7 @@ function newBand(req, res) {
 
 function show(req, res) {
     Band.findById(req.params.id, function (err, band) {       
-            res.render('bands/show', { band });
+            res.render('bands/show', {  band });
         });
 }
 

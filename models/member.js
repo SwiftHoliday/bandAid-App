@@ -6,10 +6,12 @@ const Schema = mongoose.Schema;
 
 
 const memberSchema = new Schema({
+person: {
     name: String,
     skills: String,
-    telephone: Number,
-    email: String,
+    telephone: String,
+    email: String
+},
+ 
 });
-
 module.exports = mongoose.model('Member', memberSchema);

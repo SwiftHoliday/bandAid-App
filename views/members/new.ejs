@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Members</title>
+  <title>New Band</title>
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Fontdiner+Swanky&display=swap" rel="stylesheet">
   <!-- Materialize Icons -->
@@ -21,27 +21,31 @@
                 <ul class="right">
                     <li><a href="/bands">Bands</a></li>
                     <li><a href="/">Home</a></li>
-                    <li><a href="/members">Members</a></li>
-                    <h2>Your Members</h2>
-                        <form action="/bands/<%= bandId %>/members" method="POST">
+                    <li><a href="/">Members</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+        <h1>Add Members to <%= bandId %></h1>
+            <form id="new-member-form" action="/bands/<%= bandId %>/members" method="POST">
+                 <div>
+                     <label>Name:</label>
+                         <input name="name" placeholder="Ex. First Last" required>
+                         </div>
                             <div>
-                                <input name="name" required>
-                                <label>Name:</label>
-                            </div>
-                            <div>
-                                <input name="skills" required>
                                 <label>Skills:</label>
+                                <input name="skills" placeholder="Ex. Guitar, Drums, Piano" required>
                             </div>
                             <div>
-                                <input name="telephone" type="number">
                                 <label>Phone Number:</label>
+                                <input name="telephone" type="tel" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Ex. 404-123-4567" required>
                             </div>
                             <div>
-                                <input name="email">
                                 <label>Email:</label>
+                                <input name="email" placeholder="Ex. user@email.com">
                             </div>
                             <input type="submit" value="Add Member">
-                        </form>
+                     </form>
                 </ul>
             </div>
         </nav>

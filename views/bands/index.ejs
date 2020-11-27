@@ -51,7 +51,7 @@
       <tbody>
         <% bands.forEach(function(band) { %>
         <tr>
-          <td><%= band._id %></td>
+          <td><%= band.name %></td>
           <td><a href="/bands/<%= band._id %>">See Band Details</a></td>
           <td><a href="/bands/<%= band._id %>/members/new">Add Members</a></td>
         </tr>
