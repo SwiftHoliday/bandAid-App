@@ -35,7 +35,7 @@ function newBand(req, res) {
 
 function show(req, res) {
     Band.findById(req.params.id, function (err, band) { 
-        Member.find({ band: band._id }.populate, function(err, members) {
+        Member.find({ band: band._id }, function(err, members) {
             
             res.render('bands/show', {  band, members });
         });
