@@ -49,11 +49,14 @@
         <div class="grid-container">
             <table id="detail-info">
                     <tbody>
-                        <%= members.forEach(function(member) { %>
+                        <% members.forEach(function(member) { %>
                             <tr>
                                 <td><%= member.name %></td>
+                                <td><%= member.skills %></td>
+                                <td><%= member.telephone %></td>
+                                <td><%= member.email %></td>
                             </tr> 
-                            <%= }); %>
+                            <% }); %>
                         </tbody>
                     </table>
                 </div>

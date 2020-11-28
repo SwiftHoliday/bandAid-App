@@ -1,5 +1,5 @@
 const passport = require('passport');
-const Band = require('../models/band');
+const User = require('../models/user');
 const GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
 
 passport.use(new GoogleStrategy({
@@ -8,33 +8,33 @@ passport.use(new GoogleStrategy({
     callbackURL: process.env.GOOGLE_CALLBACK
 }, function(accessToken, refreshToken, profile, cb) {
         
-        Band.findOne({ 'googleId': profile.id }, function (err, band) {
+        User.findOne({ 'googleId': profile.id }, function (err, user) {
             if (err) return cb(err);
-            if (band) {
-                return cb(null, band);
+            if (user) {
+                return cb(null, user);
             } else {
-                const newBand = new Band({
+                const newUser = new User({
                     name: profile.displayName,
                     email: profile.emails[0].value,
                     googleId: profile.id,
                     avatarURL: profile._json.picture
                 });
 
-                newBand.save(function (err) {
+                newUser.save(function (err) {
                     if (err) return cb(err);
-                    return cb(null, newBand);
+                    return cb(null, newUser);
                 });
             }
         });
 }));
 
 
-passport.serializeUser(function(band, done) {
-    done(null, band.id);
+passport.serializeUser(function(user, done) {
+    done(null, user.id);
 });
 
 passport.deserializeUser(function (id, done) {
-    Band.findById(id, function (err, band) {
-        done(err, band)
+    User.findById(id, function (err, user) {
+        done(err, user)
     });
 });

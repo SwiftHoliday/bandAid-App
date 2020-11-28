@@ -19,18 +19,6 @@ function index(req, res) {
     });
 }
 
-/*
-function create(req, res) {
-    for (let key in req.body) {
-        if (req.body[key] === '') delete req.body[key];
-    }
-    const band = new Band(req.body);
-    band.save(function (err) {
-        if (err) return res.redirect('/bands/new');
-        res.redirect('/bands');
-    });
-}
-*/
 
 function create(req, res) {
    const band = new Band(req.body); 
@@ -44,11 +32,28 @@ function newBand(req, res) {
     res.render('bands/new', { title: 'Add a New Band'});
 }
 
+
 function show(req, res) {
-    Band.findById(req.params.id, function (err, band) {       
-            res.render('bands/show', {  band });
+    Band.findById(req.params.id, function (err, band) { 
+        Member.find({ band: band._id }.populate, function(err, members) {
+            
+            res.render('bands/show', {  band, members });
         });
+     });
 }
+
+
+/*
+function show(req, res) {
+    Band.findById(req.params.id)
+    .populate('name').populate('name').exec(function(err, band) {
+        Member.find({ band: band}).populate('name').exec(function(err, members) {
+            
+            res.render('bands/show', { band, members });
+        })
+    });
+}
+*/
 
 
 function deleteBand(req, res) {
