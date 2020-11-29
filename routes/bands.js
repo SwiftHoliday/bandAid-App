@@ -17,4 +17,5 @@ router.post('/', bandsCtrl.create);
 router.get('/:id', bandsCtrl.show);
 router.delete('/:id', bandsCtrl.deleteBand);
 
+
 module.exports = router;

@@ -33,27 +33,26 @@ function newBand(req, res) {
 }
 
 
+/*
 function show(req, res) {
     Band.findById(req.params.id, function (err, band) { 
         Member.find({ band: band._id }, function(err, members) {
-            
             res.render('bands/show', {  band, members });
         });
      });
 }
+*/
 
 
-/*
 function show(req, res) {
     Band.findById(req.params.id)
-    .populate('name').populate('name').exec(function(err, band) {
-        Member.find({ band: band}).populate('name').exec(function(err, members) {
-            
+    .populate('members').exec(function(err, band) {
+        Member.find({ band: band}).populate('members').exec(function(err, members) {
+            console.log(err, members)
             res.render('bands/show', { band, members });
         })
     });
 }
-*/
 
 
 function deleteBand(req, res) {

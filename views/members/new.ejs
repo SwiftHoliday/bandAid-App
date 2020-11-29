@@ -30,24 +30,27 @@
         <h3><%=  %></h3>
             <form id="new-member-form" action="/bands/<%= bandId %>/members" method="POST">
                  <div>
-                     <label>Name:</label>
-                         <input name="name" placeholder="Ex. First Last" required>
+                     <label>Name:
+                         <input type="text" name="name" placeholder="Ex. First Last" required>
+                        </label>
                          </div>
                             <div>
-                                <label>Skills:</label>
+                                <label>Skills:
                                 <input name="skills" placeholder="Ex. Guitar, Drums, Piano" required>
+                            </label>
                             </div>
                             <div>
-                                <label>Phone Number:</label>
+                                <label>Phone Number:
                                 <input name="telephone" type="tel" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Ex. 404-123-4567" required>
+                            </label>
                             </div>
                             <div>
-                                <label>Email:</label>
+                                <label>Email:
                                 <input name="email" placeholder="Ex. user@email.com">
+                            </label>
                             </div>
                             <input type="submit" value="Add Member">
-                        </ul>
-                    </form>       
+                    </form>    
                 </body>
             </html>
                 
