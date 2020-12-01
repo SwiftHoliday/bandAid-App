@@ -1,6 +1,6 @@
 # Band Aid
 
-Many Non-profit and Religious organizations are ran by well structured teams of incredible people, most on a volunteer basis. One very important element that is found in most events/gatherings held by these organizations is live music. Some organizations can have up to four or more of these live music events/gatherings in a single month, maintained by a consistant rotation of new members and volunteers. That is where *Band Aid* comes in. *Band Aid* is a team management app designed for event coordinators to build teams that will be playing at specific events/gatherings, keep a log key team member information and store it to recall at a later time. I Hope you enjoy it!
+Many Non-profit and Religious organizations are ran by well structured teams of incredible people, most on a volunteer basis. One very important element that is found in most events/gatherings held by these organizations is live music. Some organizations can have up to four or more of these live music events/gatherings in a single month, maintained by a consistant rotation of new members and volunteers. That is where *Band Aid* comes in. *Band Aid* is a team management app designed for event coordinators to build bands that will be playing at specific events/gatherings, keep a log key team member information and store it to recall at a later time. I Hope you enjoy it!
 
 
 
