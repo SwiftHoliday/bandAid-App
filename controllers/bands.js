@@ -1,4 +1,5 @@
 
+
 const Band = require('../models/band');
 const Member = require('../models/member');
 
@@ -33,26 +34,17 @@ function newBand(req, res) {
 }
 
 
-/*
-function show(req, res) {
-    Band.findById(req.params.id, function (err, band) { 
-        Member.find({ band: band._id }, function(err, members) {
-            res.render('bands/show', {  band, members });
-        });
-     });
-}
-*/
 
-
+// Better Function
 function show(req, res) {
-    Band.findById(req.params.id)
-    .populate('members').exec(function(err, band) {
-        Member.find({ band: band}).populate('members').exec(function(err, members) {
-            console.log(err, members)
-            res.render('bands/show', { band, members });
+    Band.findById(req.params.id, function (err, band) {
+        Member.find({ bandId: req.params.id }, function (err, members) {
+            console.log(band, members)
+            res.render('bands/show', {band, members})
         })
-    });
+    })
 }
+
 
 
 function deleteBand(req, res) {

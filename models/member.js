@@ -10,6 +10,7 @@ const memberSchema = new Schema({
         name: String,
         skills: String,
         telephone: String,
-        email: String
+        email: String,
+        bandId: String
 });
 module.exports = mongoose.model('Member', memberSchema);

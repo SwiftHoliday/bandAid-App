@@ -27,8 +27,9 @@
         </nav>
     </div>
         <h1>Add Members to</h1>
-        <h3><%=  %></h3>
-            <form id="new-member-form" action="/bands/<%= bandId %>/members" method="POST">
+    
+        <h3><%= band.name %></h3>
+            <form id="new-member-form" action="/bands/<%= band._id %>/members" method="POST">
                  <div>
                      <label>Name:
                          <input type="text" name="name" placeholder="Ex. First Last" required>

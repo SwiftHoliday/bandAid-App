@@ -19,7 +19,8 @@ require('./config/passport');
 // require routes
 const indexRouter = require('./routes/index');
 const bandsRouter = require('./routes/bands');
- const membersRouter = require('./routes/members')
+const membersRouter = require('./routes/members');
+
 // view engine setup
 app.set('view engine', 'ejs');
 

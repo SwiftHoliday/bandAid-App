@@ -4,15 +4,30 @@ const Band = require('../models/band');
 
 module.exports = {
     new: newMember,
-    create
+    create,
+    index
 };
 
+function index(req, res) {
+    Band.find({}, function (err, bands) {
+        res.render('bands/index', {
+            bands,
+            user: req.user
+        });
+    });
+}
+
+function newMember(req, res) {
+    Band.findById(req.params.id, function (err, band) {
+        res.render('members/new', { band });  
+    })
+}
 
 function create(req, res) {
     Band.findById(req.params.id, function (err, band) {
-        Member.create(req.body, function (err, member) {
-            console.log( err, band, member)
-            band.member.push([member])
+        req.body.bandId = band._id.toString()
+        Member.create(req.body, function (err,  members) {
+            console.log( err, band, members)
             band.save(function (err) {
             });
             res.redirect(`/bands/${band._id}`)
@@ -20,6 +35,3 @@ function create(req, res) {
     });
 }
 
-function newMember(req, res) {
-    res.render('members/new', { bandId: req.params.id });
-}
