@@ -53,7 +53,9 @@ app.use(function(req, res, next) {
 // mount routes
 app.use('/', indexRouter);
 app.use('/bands', bandsRouter);
- app.use('/', membersRouter)
+app.use('/', membersRouter);
+
+
 
 // tell application to listen
 app.listen(port, function() {

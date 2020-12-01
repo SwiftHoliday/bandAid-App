@@ -8,14 +8,12 @@ const router = express.Router();
 const bandsCtrl = require('../controllers/bands');
 
 
-
-
 // Define Routes
 router.get('/', bandsCtrl.index); // see all bands
 router.get('/new', bandsCtrl.new); // make a new band page
 router.post('/', bandsCtrl.create);
 router.get('/:id', bandsCtrl.show);
 router.delete('/:id', bandsCtrl.deleteBand);
-
-
+router.get('/:id/edit', bandsCtrl.editBandName);
+router.put('/:id', bandsCtrl.updateBandName )
 module.exports = router;

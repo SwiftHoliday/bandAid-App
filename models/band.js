@@ -10,7 +10,8 @@ const memberSchema = new Schema
 // defined band Schema
 const bandSchema = new Schema({
     name: String,
-    members: [memberSchema]
+    members: [memberSchema],
 });
+
 
 module.exports = mongoose.model('Band', bandSchema);

@@ -23,13 +23,15 @@
                 <ul class="right">
                     <li><a href="/bands">Bands</a></li>
                     <li><a href="/">Home</a></li>
+                    <li><a href="/">Members</a></li>
+
                 </ul>
             </div>
         </nav>
     </div>
-    <h2>Let's Get Started</h2>
-    <h3>Make a Name</h3>
-    <form id="new-band-form" action="/bands" method="POST">
+    <h2>Edit Band Name</h2>
+    <h3><%=  %></h3>
+    <form id="edit-band-form" action="/bands/<%= bandId %>?_method=PUT" method="POST">
         <div>
             <label>Band Name:</label>
             <input type="text" name="name" required>

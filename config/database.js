@@ -8,7 +8,9 @@ const db = mongoose.connection;
 mongoose.connect(process.env.DATABASE_URL || 'mongodb://localhost/bandAid', {
     useNewUrlParser: true,
     useCreateIndex: true,
-    useUnifiedTopology: true
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+    useFindAndModify: false
 });
 
 // set up connection listener

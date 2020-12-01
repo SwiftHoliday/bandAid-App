@@ -39,8 +39,9 @@
             </div>
         </nav>
     </div>
+  </form>
     <h1>Your Bands</h1>
-      </form>
+    
     <table id="list">
       <thead>
         <tr>
@@ -53,6 +54,7 @@
           <td><%= band.name %></td>
           <td><a href="/bands/<%= band._id %>">See Who's in the Band</a></td>
           <td><a href="/bands/<%= band._id %>/members/new">Add Members</a></td>
+          <td><a href="/bands/<%= band._id %>/edit">Edit Band Name</a></td>
         </tr>
         <% }); %>
       </tbody>
