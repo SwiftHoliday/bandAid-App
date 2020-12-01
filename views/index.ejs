@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link rel="stylesheet" href="/css/style.css" />
   <!-- JavaScript for Materialize -->
+  <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </head>
 
@@ -36,12 +37,9 @@
             </div>
         </nav>
     </div>
+    <main>
     <h1>Welcome to Band Aid</h1>
     
     <h3><a href="/bands/new">Create Band</a></h3>
-
-    <footer>
-        <p>Copyright &copy; 2020 Band Aid All Rights Reserved</p>
-    </footer>
-</body>
-</html>
+</main>
+    <%- include('./partials/footer') %>

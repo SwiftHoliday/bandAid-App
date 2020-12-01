@@ -72,3 +72,5 @@ function updateBandName(req, res) {
         res.redirect('/bands')
     })
 }
+
+

@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link rel="stylesheet" href="/css/style.css" />
   <!-- JavaScript for Materialize -->
+  <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </head>
 
@@ -29,6 +30,7 @@
             </div>
         </nav>
     </div>
+    <main>
     <h2>Edit Band Name</h2>
     <h3><%=  %></h3>
     <form id="edit-band-form" action="/bands/<%= bandId %>?_method=PUT" method="POST">
@@ -41,5 +43,7 @@
             <input type="submit" value="Submit">
         </div>
     </form>
+</main>
+    <%- include('../partials/footer') %>
 </body>
 </html>

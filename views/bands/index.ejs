@@ -17,6 +17,7 @@
      <link rel="stylesheet" href="/css/style.css" />
 
      <!-- JavaScript for Materialize -->
+     <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
      <script defer src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
    </head>
 
@@ -40,8 +41,8 @@
         </nav>
     </div>
   </form>
+  <main>
     <h1>Your Bands</h1>
-    
     <table id="list">
       <thead>
         <tr>
@@ -52,12 +53,16 @@
         <% bands.forEach(function(band) { %>
         <tr>
           <td><%= band.name %></td>
-          <td><a href="/bands/<%= band._id %>">See Who's in the Band</a></td>
-          <td><a href="/bands/<%= band._id %>/members/new">Add Members</a></td>
+          <td><a href="/bands/<%= band._id %>">See Band Details</a></td>
+          <td><a href="/bands/<%= band._id %>/members/new">Add Band Members</a></td>
           <td><a href="/bands/<%= band._id %>/edit">Edit Band Name</a></td>
         </tr>
         <% }); %>
       </tbody>
     </table>
-</body>
+  </main>
+  <%- include('../partials/footer') %>
+  </body>
 </html>
+    
+ 

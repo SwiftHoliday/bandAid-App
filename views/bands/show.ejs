@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link rel="stylesheet" href="/css/style.css" />
   <!-- JavaScript for Materialize -->
+  <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </head>
 
@@ -23,18 +24,18 @@
                 <ul class="right">
                     <li><a href="/bands">Bands</a></li>
                     <li><a href="/">Home</a></li>
-                   
+                    
                 </ul>
             </div>
         </nav>
     </div>
-
+    <main>
     <h2><%= band.name %></h2>
     <form action="/bands/<%= band._id%>?_method=DELETE" method="POST">
         <button type="submit">Delete</button>
     </form>
-        <div class="grid-container">
-            <table id="detail-list">
+    <div class="grid-container">
+        <table id="detail-list">
             <thead>
                 <tr>
                     <td>
@@ -60,5 +61,7 @@
                         </tbody>
                     </table>
                 </div>
+            </main>
+                <%- include('../partials/footer') %>
             </body>
         </html>
