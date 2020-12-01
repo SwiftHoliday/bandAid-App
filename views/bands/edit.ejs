@@ -14,8 +14,6 @@
   <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </head>
-
-
 <body>
     <div class="navbar-fixed">
         <nav>
@@ -24,15 +22,15 @@
                 <ul class="right">
                     <li><a href="/bands">Bands</a></li>
                     <li><a href="/">Home</a></li>
-                    <li><a href="/">Members</a></li>
-
                 </ul>
             </div>
         </nav>
     </div>
 
     <main>
-    <h2>Edit Band Name</h2>
+        <div class="edit-band-head">
+            <h2>Edit Band Name</h2>
+        </div>
     <form id="edit-band-form" action="/bands/<%= bandId %>?_method=PUT" method="POST">
         <div>
             <label>Band Name:</label>

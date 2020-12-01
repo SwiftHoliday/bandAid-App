@@ -29,11 +29,15 @@
             </div>
         </nav>
     </div>
+
     <main>
-    <h2><%= band.name %></h2>
+        <div class="show-band-head">
+            <h2><%= band.name %></h2>
+        </div>
     <form action="/bands/<%= band._id%>?_method=DELETE" method="POST">
         <button type="submit">Delete</button>
     </form>
+    
     <div class="grid-container">
         <table>
             <tr>

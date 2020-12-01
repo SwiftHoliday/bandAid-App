@@ -1,6 +1,5 @@
 // require the modules (express and controller)
 const express = require('express');
-
 const passport = require('passport');
 
 
@@ -9,7 +8,6 @@ const indexCtrl = require('../controllers/index');
 
 // create router object
 const router = express.Router();
-
 
 // define routes
 router.get('/auth/google', passport.authenticate('google', {
@@ -26,7 +24,6 @@ router.get('/logout', function (req, res) {
     req.logOut();
     res.redirect('/');
 });
-
 
 router.get('/', indexCtrl.index);
 

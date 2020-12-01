@@ -19,8 +19,8 @@ function index(req, res) {
 
 function newMember(req, res) {
     Band.findById(req.params.id, function (err, band) {
-        res.render('members/new', { band });  
-    })
+        res.render('members/new', { band });
+    });
 }
 
 function create(req, res) {
@@ -30,7 +30,7 @@ function create(req, res) {
             console.log( err, band, members)
             band.save(function (err) {
             });
-            res.redirect(`/bands/${band._id}`)
+            res.redirect(`/bands/${band._id}`);
         });
     });
 }

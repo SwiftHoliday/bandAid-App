@@ -33,6 +33,19 @@ th {
 .index-page {
     text-align: center;
     margin-top: 290px;
+    font-family: 'Fontdiner Swanky', cursive;
+}
+
+.new-band-body {
+    font-family: 'Fontdiner Swanky', cursive;
+}
+
+ .new-member-head{
+    font-family: 'Fontdiner Swanky', cursive;
+}
+
+.edit-band-head {
+    font-family: 'Fontdiner Swanky', cursive;
 }
 
 
