@@ -32,6 +32,8 @@ Many Non-profit and Religious organizations are ran by well structured teams of 
 
 # Getting Started
 
+Go to the [Band Aid App]( https://band-aid-app.herokuapp.com/)
+
 [Trello](https://trello.com/b/3uuLTCkZ/bandaid)
 
 
