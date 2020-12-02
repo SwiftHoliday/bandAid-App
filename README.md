@@ -42,3 +42,4 @@ Go to the [Band Aid App]( https://band-aid-app.herokuapp.com/)
 * Add support for date and time scheduling
 * Add new feature to update and delete members
 * Add support to mark up stage layouts
+* Add additional styling
